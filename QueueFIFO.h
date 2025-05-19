@@ -50,6 +50,7 @@ public:
         count++;
     }
 
+    // удаление и возвращение эл из начала очереди
     T pop() {
         if (isEmpty()) {
             throw std::underflow_error("Buffer is empty");
@@ -60,6 +61,7 @@ public:
         return element;
     }
 
+    // первый без удаления
     T peekElement() {
         assert(!isEmpty() && "QueueFIFO empty");
         return buffer[head];
